@@ -1,6 +1,7 @@
 import discord
 import random
 from discord.ext import commands
+from run import token
 
 client = commands.Bot(command_prefix='-')
 
@@ -23,7 +24,7 @@ async def on_member_remove(member):
 
 @client.command()
 async def ping(ctx):
-    await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+    await ctx.send(f'{round(client.latency * 1000)}ms')
 
 
 @client.command(aliases=['8ball'])
@@ -83,4 +84,4 @@ async def spin(ctx):
         await ctx.send(f'{random.choice(wheel)} has been chosen!')
         wheel.clear()
 
-client.run('NzYyNjc3MDEzMTEwMTk0MjE3.X3soUQ.H-m1UGmP4V2d1Xn7Vn2i1VZAs8A')
+client.run(token)
