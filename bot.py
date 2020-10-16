@@ -142,20 +142,20 @@ async def timetable(ctx, *, day=''):
             await ctx.send(f'{day}\n\nLIVE LECTURES:\n1pm: Computational Mathematics\n2pm: Functional Programming\n4pm: Information Management II\n\nRECORDED LECTURES:\nComputer Architecture II\nComputational Mathematics\nInformation Managment II')
 
     else:
-        day.lower()
-        if day == 'saturday' or day == 'sunday' or day == 'friday':
+        day = day.lower()
+        if day == 'saturday' or day == 'sunday' or day == 'friday' or day == 'fri' or day == 'sat' or day == 'sun':
             await ctx.send(f'It is a {day}.\nNO COLLEGE')
 
-        elif day == 'monday':
+        elif day == 'monday' or day == 'mon':
             await ctx.send(f'{day}\n\nLIVE LECTURES:\n12pm: Software Engineering\n1pm: Symbolic Programming\n2pm: Functional Programming\n4pm:[TUTORIAL] Symbolic Programming\n\nRECORDED LECTURES:\nComputer Architecture II')
 
-        elif day == 'tuesday':
+        elif day == 'tuesday' or day == 'tue':
             await ctx.send(f'{day}\n\nLIVE LECTURES:\n9am: Symbolic Programming\n2pm:[TUTORIAL] Symbolic Programming\n\nRECORDED LECTURES:\nSoftware Engineering')
 
-        elif day == 'wednesday':
+        elif day == 'wednesday' or day == 'wed':
             await ctx.send(f'{day}\n\nLIVE LECTURES:\n9am: Software Engineering\n2pm: Information Management II\n3pm:[Q&A] Computer Architecture II\n4pm: Functional Programming\n\nRECORDED LECTURES:\nComputational Mathematics')
 
-        elif day == 'thursday':
+        elif day == 'thursday' or day == 'thur':
             await ctx.send(f'{day}\n\nLIVE LECTURES:\n1pm: Computational Mathematics\n2pm: Functional Programming\n4pm: Information Management II\n\nRECORDED LECTURES:\nComputer Architecture II\nComputational Mathematics\nInformation Managment II')
 
 client.run(token)
